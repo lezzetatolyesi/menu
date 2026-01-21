@@ -1,0 +1,52 @@
+/* Sabit Instagram butonu — içerikten taşmayan güvenli konum */
+:root{
+  --ig-size: 52px;
+  --ig-gap: 16px;
+}
+
+/* Sayfanın altına güvenli boşluk bırak: buton yazıların üstüne gelmesin */
+body{
+  padding-bottom: calc(var(--ig-size) + var(--ig-gap) + 10px);
+}
+
+/* Instagram FAB */
+.ig-fab{
+  position: fixed;
+  left: var(--ig-gap);
+  bottom: var(--ig-gap);
+  z-index: 999;
+  width: var(--ig-size);
+  height: var(--ig-size);
+  display: grid;
+  place-items: center;
+
+  border-radius: 20px;
+  background: rgba(255,255,255,.84);
+  border: 1px solid rgba(11,31,54,.12);
+  box-shadow: 0 10px 24px rgba(11,31,54,.12);
+  backdrop-filter: blur(10px);
+
+  transition: transform .14s ease, background .14s ease, border-color .14s ease;
+}
+
+.ig-fab:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.96);
+  border-color: rgba(135,149,122,.30);
+}
+
+/* İkon */
+.ig-fab svg{
+  opacity: .88;
+}
+
+/* Mobil: daha küçük + daha az boşluk */
+@media (max-width: 520px){
+  :root{
+    --ig-size: 48px;
+    --ig-gap: 12px;
+  }
+  .ig-fab{
+    border-radius: 18px;
+  }
+}
