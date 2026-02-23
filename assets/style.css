@@ -289,19 +289,23 @@ footer{
   place-items: center;
 
   border-radius: 20px;
-  background: rgba(255,255,255,.84);
-  border: 1px solid rgba(11,31,54,.12);
-  box-shadow: 0 10px 24px rgba(11,31,54,.12);
-  backdrop-filter: blur(10px);
+  /* Instagram'ın orijinal renk geçişi (gradient) */
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff; /* İkon rengini beyaz yapıyoruz */
+  border: none;
+  box-shadow: 0 10px 24px rgba(220, 39, 67, 0.3); /* Gölgelendirmeyi butona uygun sıcak bir tona çektik */
 
-  transition: transform .14s ease, background .14s ease, border-color .14s ease;
+  transition: transform .14s ease, box-shadow .14s ease;
 }
+
 .ig-fab:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.96);
-  border-color: rgba(135,149,122,.30);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(220, 39, 67, 0.45);
 }
-.ig-fab svg{opacity:.88}
+
+.ig-fab svg{
+  opacity: 1; /* İkonun tam belirgin olmasını sağlıyoruz */
+}
 
 /* Mobil */
 @media (max-width: 520px){
