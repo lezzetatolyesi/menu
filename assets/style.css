@@ -332,10 +332,17 @@ footer{
   .span12::after{display:none;}
 }
 .contact-note-row{
-  align-items:center;
+  align-items:flex-start;
+}
+
+.contact-note-row .price{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:8px;
 }
 
 .contact-note-row .tag--contact{
-  text-decoration:none;
+  text-decoration:none !important;
 }
 
