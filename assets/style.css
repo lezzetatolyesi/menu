@@ -331,4 +331,27 @@ footer{
   .card.right::after{left:18px}
   .span12::after{display:none;}
 }
+.contact-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 18px 14px;
+}
+
+.contact-row .note{
+  flex:1;
+  margin:0;
+  line-height:1.4;
+}
+
+.contact-row .tag--contact{
+  flex-shrink:0;
+  text-decoration:none !important;
+  color:rgba(11,31,54,.80);
+}
+
+.contact-row .tag--contact:hover{
+  text-decoration:none !important;
+}
 
