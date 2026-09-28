@@ -331,6 +331,11 @@ footer{
   .card.right::after{left:18px}
   .span12::after{display:none;}
 }
-.tag--contact{
-  text-decoration:none !important;
+.contact-note-row{
+  align-items:center;
 }
+
+.contact-note-row .tag--contact{
+  text-decoration:none;
+}
+
